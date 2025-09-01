@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boisar Varsha Marathon 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .top-bar {
+      padding: 20px 40px;
+      background-color: white;
+    }
+
+    .top-bar img {
+      max-height: 60px;
+    }
+
+    .main-header {
+      background-color: #123465;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 40px 60px;
+      flex-wrap: wrap;
+    }
+
+    .main-header img {
+      max-width: 200px;
+      height: auto;
+      margin-right: 40px;
+    }
+
+    .header-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    .form-section {
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1rem;
+      width: 300px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #123465;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0d2e4f;
+    }
+
+    .footer {
+      margin-top: auto;
+      background-color: #123465;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top SMR Logo -->
+  <div class="top-bar">
+    <img src="{{ url_for('static', filename='2.jpg') }}" alt="SMR Logo" width="120">
+  </div>
+
+  <!-- Blue Banner with Boisar Logo and Title -->
+  <div class="main-header">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Boisar Marathon Logo" />
+    
+    <div class="header-text">
+      <div class="title">Boisar Varsha Marathon 2025</div>
+      <div class="subtitle">Organised By: Adhar Pratishthan</div>
+      <div class="subtitle">Date: 24 August 2025</div>
+    </div>
+  </div>
+
+  <!-- Bib Number Input -->
+  <div class="form-section">
+  <form action="/generate" method="POST">
+    <input type="text" name="bib_no" placeholder="Enter Bib Number" required>
+    <button type="submit">Download Certificate</button>
+  </form>
+</div>
+
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 Boisar Varsha Marathon. All rights reserved.
+  </div>
+
+</body>
+</html>
